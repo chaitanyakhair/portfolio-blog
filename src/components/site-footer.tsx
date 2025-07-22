@@ -31,7 +31,7 @@ export function SiteFooter() {
             "bg-[repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] [--pattern-foreground:var(--color-edge)]/56"
           )}
         >
-          <div className="mx-auto flex items-center justify-center gap-3 border-x border-edge bg-background px-4">
+          {/* <div className="mx-auto flex items-center justify-center gap-3 border-x border-edge bg-background px-4">
             <a
               className="flex font-mono text-xs font-medium text-muted-foreground"
               href={`${SITE_INFO.url}/llms.txt`}
@@ -67,7 +67,7 @@ export function SiteFooter() {
               <Icons.dmca className="h-5 w-auto" />
               <span className="sr-only">DMCA.com Protection Status</span>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="pb-[env(safe-area-inset-bottom,0px)]">

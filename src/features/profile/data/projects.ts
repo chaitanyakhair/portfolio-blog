@@ -22,7 +22,7 @@ export const PROJECTS: Project[] = [
 - Different Dashboards for Users and Admins/Doctors for easy use.
 - PDF download support for users.
 - Multi-Language support.`,
-    logo: "/projects/tanden_favicon.png",
+    logo: "/images/projects/tanden_favicon.png",
     isExpanded: true,
   },
   {
@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
 - Implemented Socket.io for realtime move synchronization.
 - Easy to use interface with straight forward gameplay without any waiting or loading.
 - Validation for each move of every player so no illegal moves allowed.`,
-    logo: "/projects/chess.png",
+    logo: "/images/projects/chess.png",
     isExpanded: true,
   },
   {
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
 - Multiple users can see locations of each other.
 - Used Leaflet library for high accuracy and socket.io for low latency.
 - Realtime moving of users is visible.`,
-    logo: "/projects/realtime-tracker.png",
+    logo: "/images/projects/realtime-tracker.png",
     isExpanded: true,
   },
 //   {

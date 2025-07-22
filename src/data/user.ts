@@ -2,7 +2,7 @@ export const USER = {
   firstName: "Chaitanya",
   lastName: "Khair",
   displayName: "Chaitanya Khair",
-  username: "ncdai",
+  username: "chaitanyakhair",
   gender: "male",
   bio: "Creating with code, driven by passion.",
   flipSentences: [
@@ -14,19 +14,19 @@ export const USER = {
   phoneNumber: "KzkxIDg2Mzc3IDk3Nzcx", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "Y2hhaXRhbnlha2hhaXJjb21wQGdtYWlsLmNvbQ==", // base64 encoded
   website: "https://chaitanyakhair.works",
-  otherWebsites: [
-    "https://dai.ng",
-    "https://dai.so",
-    "https://d.io.vn",
-    "https://d.id.vn",
-    "https://dai.io.vn",
-    "https://dai.id.vn",
-    "https://chanhdai.io.vn",
-    "https://chanhdai.id.vn",
-    "https://ncdai.vn",
-    "https://ncdai.net",
-    "https://dai.is-a.dev",
-  ],
+  // otherWebsites: [
+  //   "https://dai.ng",
+  //   "https://dai.so",
+  //   "https://d.io.vn",
+  //   "https://d.id.vn",
+  //   "https://dai.io.vn",
+  //   "https://dai.id.vn",
+  //   "https://chanhdai.io.vn",
+  //   "https://chanhdai.id.vn",
+  //   "https://ncdai.vn",
+  //   "https://ncdai.net",
+  //   "https://dai.is-a.dev",
+  // ],
   jobTitle: "Software Developer & Designer",
   jobs: [
     {
@@ -50,9 +50,9 @@ My journey in tech has been driven by a desire to create intuitive and dynamic w
 Let's connect and collaborate!
   `,
   avatar: "/pfp.webp",
-  ogImage: "https://assets.chanhdai.com/images/screenshot-og-image-dark.png",
+  ogImage: "/images/ss-pc-dark.png",
   keywords:
-    "ncdai, nguyenchanhdai, nguyen chanh dai, chanhdai, chanh dai, iamncdai, quaric, zadark, nguyễn chánh đại, chánh đại",
+    "chaitanyakhair, chaitanya khair, chaitanya kedar khair, khair, chaitanya, chaitanya_khair",
   dateCreated: "2023-10-20", // YYYY-MM-DD
 };
 
