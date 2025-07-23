@@ -23,6 +23,7 @@ export function CKMark(props: React.ComponentProps<typeof Image>) {
   );
 }
 export function CKMarkSmall(props: React.ComponentProps<typeof Image>) {
+  const { src, alt, width, height, ...rest } = props;
   return (
     <>
       <Image
@@ -32,7 +33,7 @@ export function CKMarkSmall(props: React.ComponentProps<typeof Image>) {
         height={16}
         className="block dark:hidden"
         unoptimized
-        {...props}
+        {...rest}
       />
       <Image
         src="/mark-dark.png"
@@ -41,7 +42,7 @@ export function CKMarkSmall(props: React.ComponentProps<typeof Image>) {
         height={16}
         className="hidden dark:block"
         unoptimized
-        {...props}
+        {...rest}
       />
     </>
   );
