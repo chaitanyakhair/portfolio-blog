@@ -11,6 +11,7 @@ import {
   RssIcon,
   SunIcon,
   TextIcon,
+  UserIcon,
 } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -52,7 +53,7 @@ const MENU_LINKS: CommandLinkItem[] = [
   {
     title: "Portfolio",
     href: "/",
-    icon: CKMarkSmall,
+    icon: UserIcon,
   },
   {
     title: "Blog",
