@@ -12,7 +12,7 @@ export function SiteHeaderMark() {
   return pathname === "/" ? <CKMarkMotion /> : <CKMark />;
 }
 
-function CKMotion() {
+function CKMarkMotion() {
   const { scrollY } = useScroll();
   const [visible, setVisible] = useState(false);
   const distanceRef = useRef(160);
