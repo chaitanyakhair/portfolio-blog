@@ -6,7 +6,7 @@ import { getAllPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "A collection of articles on development, design, and ideas.",
+  description: "A collection of articles on development, tech, and ideas.",
 };
 
 export default function Page() {

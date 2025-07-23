@@ -82,7 +82,7 @@ export const metadata: Metadata = {
       },
     ],
     apple: {
-      url: "tab-icon.png",
+      url: "/tab-icon.png",
       type: "image/png",
       sizes: "180x180",
     },

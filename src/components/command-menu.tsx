@@ -35,8 +35,7 @@ import { cn } from "@/lib/utils";
 import type { Post } from "@/types/blog";
 import { copyText } from "@/utils/copy";
 
-import { ChanhDaiMark, ChanhDaiMarkSmall } from "./chanhdai-mark";
-import { getWordmarkSVG } from "./chanhdai-wordmark";
+import { CKMarkSmall } from "./ck-mark";
 import { Icons } from "./icons";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
@@ -49,13 +48,14 @@ type CommandLinkItem = {
   iconImage?: string;
   keywords?: string[];
   openInNewTab?: boolean;
+  download?: boolean;
 };
 
 const MENU_LINKS: CommandLinkItem[] = [
   {
     title: "Portfolio",
     href: "/",
-    icon: ChanhDaiMarkSmall,
+    icon: CKMarkSmall,
   },
   {
     title: "Blog",
@@ -91,9 +91,11 @@ const PORTFOLIO_LINKS: CommandLinkItem[] = [
     icon: Icons.certificate,
   },
   {
-    title: "Download vCard",
-    href: "/vcard",
+    title: "Download Resume",
+    href: "/resume.pdf",
     icon: CircleUserIcon,
+    openInNewTab: true, // Add this
+    download: true, 
   },
 ];
 
@@ -300,7 +302,20 @@ function CommandLinkGroup({
           <CommandItem
             key={link.href}
             keywords={link.keywords}
-            onSelect={() => onLinkSelect(link.href, link.openInNewTab)}
+            onSelect={() => {
+              if (link.download) {
+                // Create a temporary anchor to trigger download
+                const a = document.createElement('a');
+                a.href = link.href;
+                a.download = '';
+                a.target = '_blank';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+              } else {
+                onLinkSelect(link.href, link.openInNewTab);
+              }
+            }}
           >
             {link?.iconImage ? (
               <Image

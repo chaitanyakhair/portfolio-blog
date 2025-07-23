@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function ChanhDaiMark(props: React.ComponentProps<typeof Image>) {
+export function CKMark(props: React.ComponentProps<typeof Image>) {
   return (
     <>
       <Image
@@ -22,7 +22,7 @@ export function ChanhDaiMark(props: React.ComponentProps<typeof Image>) {
     </>
   );
 }
-export function ChanhDaiMarkSmall(props: React.ComponentProps<typeof Image>) {
+export function CKMarkSmall(props: React.ComponentProps<typeof Image>) {
   return (
     <>
       <Image

@@ -25,7 +25,7 @@ export const MAIN_NAV: NavItem[] = [
   },
 ];
 
-// export const SOURCE_CODE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com";
+// export const SOURCE_CODE_GITHUB_URL = "https://github.com/chaitanyakhair/portfolio-blog;
 
 export const UTM_PARAMS = {
   utm_source: "chaitanyakhair.works",

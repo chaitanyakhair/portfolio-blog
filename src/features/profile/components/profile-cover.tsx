@@ -1,5 +1,5 @@
 
-import { ChanhDaiMark } from "@/components/chanhdai-mark";
+import { CKMark } from "@/components/ck-mark";
 import { cn } from "@/lib/utils";
 
 export function ProfileCover() {
@@ -12,7 +12,7 @@ export function ProfileCover() {
           "bg-black/0.75 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5"
         )}
       >
-        <ChanhDaiMark id="js-cover-mark" className="h-2/4 w-auto" />
+        <CKMark id="js-cover-mark" className="h-2/4 w-auto" />
       </div>
   );
 }
