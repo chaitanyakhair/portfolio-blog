@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function CKMark(props: React.ComponentProps<typeof Image>) {
+export function CKMark() {
   return (
     <>
       <Image

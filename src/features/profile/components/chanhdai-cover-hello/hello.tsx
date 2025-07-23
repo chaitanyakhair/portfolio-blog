@@ -56,7 +56,7 @@ export function Hello() {
             />
           )} */}
 
-          {layers[currentIndex] === "chanhdai-wordmark" && (
+          {/* {layers[currentIndex] === "chanhdai-wordmark" && (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -65,7 +65,7 @@ export function Hello() {
             >
               <CKMark className="h-12 sm:h-16" />
             </motion.div>
-          )}
+          )} */}
         </div>
       </AnimatePresence>
 

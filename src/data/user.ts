@@ -30,9 +30,9 @@ export const USER = {
   jobTitle: "Software Developer & Designer",
   jobs: [
     {
-      title: "Full-Stack Developer & Freelancer",
-      // company: "Freelancer",
-      // website: "https://simplamo.com?ref=IN-926722",
+      title: "Full-Stack Developer",
+      company: "BUG Programming Works",
+      website: "https://bugpw.tech/",
     },
     // {
     //   title: "Founder",

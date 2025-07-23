@@ -7,10 +7,10 @@ import { useEffect, useRef, useState } from "react";
 
 import { CKMark } from "./ck-mark";
 
-export function SiteHeaderMark() {
-  const pathname = usePathname();
-  return pathname === "/" ? <CKMarkMotion /> : <CKMark />;
-}
+// export function SiteHeaderMark() {
+//   const pathname = usePathname();
+//   return pathname === "/" ? <CKMarkMotion /> : <CKMark />;
+// }
 
 function CKMarkMotion() {
   const { scrollY } = useScroll();
