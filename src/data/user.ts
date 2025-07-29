@@ -4,7 +4,7 @@ export const USER = {
   displayName: "Chaitanya Khair",
   username: "chaitanyakhair",
   gender: "male",
-  bio: "Creating with code, driven by passion.",
+  bio: "Keyboard is my paintbrush, code is my art.",
   flipSentences: [
     "Software Developer",
     "UI/UX Designer",
