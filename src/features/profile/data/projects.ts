@@ -2,6 +2,27 @@ import type { Project } from "../types/projects";
 
 export const PROJECTS: Project[] = [
   {
+    id: "portfolio+blog",
+    title: "Portfolio + Blog Website",
+    period: {
+      start: "07.2025",
+    },
+    link: "https://chaitanyakhair.works",
+    skills: [
+      "NextJS",
+      "TailwindCSS",
+      "Shadcn",
+      "MDX",
+      "Vercel",
+    ],
+    description: `This is my portfolio and blog website which is completely built with NextJS, TailwindCSS, Shadcn, MDX, and Vercel.
+- Used NextJS, TailwindCSS, Shadcn for modern and attractive UI.
+- Also added a blog section to share my thoughts and experiences.
+- Used Vercel for deployment.`,
+    logo: "/pfp.webp",
+    isExpanded: true,
+  },
+  {
     id: "gutreset",
     title: " Gutreset- Diet planning app",
     period: {
@@ -70,27 +91,7 @@ export const PROJECTS: Project[] = [
     logo: "/images/projects/realtime-tracker.png",
     isExpanded: true,
   },
-//   {
-//     id: "zadark",
-//     title: "ZaDark",
-//     period: {
-//       start: "01.2022",
-//     },
-//     link: "https://zadark.com",
-//     skills: [
-//       "Pet Project",
-//       "Open Source",
-//       "Browser Extension",
-//       "CLI",
-//       "Docusaurus 3",
-//     ],
-//     description: `ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.
-// - 80,000+ downloads on SourceForge (awarded Community Leader badge by SourceForge)
-// - 15,000+ active users via Chrome Web Store
-// - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022`,
-//     logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
-//     isExpanded: true,
-//   },
+
 //   {
 //     id: "qabox",
 //     title: "QABox",

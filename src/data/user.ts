@@ -31,8 +31,8 @@ export const USER = {
   jobs: [
     {
       title: "Full-Stack Developer",
-      company: "BUG Programming Works",
-      website: "https://bugpw.tech/",
+      company: " Freelancer",
+      website: "https://x.com/chaitanya_khair",
     },
     // {
     //   title: "Founder",
