@@ -1,0 +1,164 @@
+---
+title: Understanding the Next.js Backend — API Routes & Server-Side Logic
+description: Learn how Next.js powers full-stack development with API routes, server-side rendering, and seamless integration for building scalable backends.
+image: https://miro.medium.com/v2/resize:fit:1200/1*UMJPQhu4-PUPFgQAyr3JdQ.png
+createdAt: 2025-09-07
+updatedAt: 2025-09-07
+new: true
+---
+
+## Introduction
+
+Next.js is best known as a **React framework** for building fast, SEO-friendly frontend applications.  
+However, Next.js is **not just frontend** — it provides a **powerful backend layer** as well. With **API Routes**, built-in **server-side rendering (SSR)**, and **middleware**, you can create full-stack applications **without a separate backend server**.
+
+---
+
+## Why Use Next.js for Backend?
+
+- **No Separate Backend Server** — Backend APIs run inside the same project  
+- **Server-Side Rendering (SSR)** — Fetch data on the server for SEO & performance  
+- **Server Actions (App Router)** — Simplify backend logic with direct function calls  
+- **Edge Functions** — Deploy lightweight backend code globally for low latency  
+- **Built-In API Routing** — RESTful endpoints without Express or NestJS setup  
+
+---
+
+## Setting Up a Next.js Project
+
+```bash
+# Create a new Next.js project
+npx create-next-app@latest my-nextjs-app
+
+# Move into the project folder
+cd my-nextjs-app
+
+# Run the dev server
+npm run dev
+```
+
+## API Routes in Next.js
+
+Next.js allows you to create API endpoints inside the pages/api/ directory (for Pages Router) or in app/api/ (for App Router).
+
+```bash
+export default function handler(req, res) {
+  res.status(200).json({ message: 'Hello from Next.js Backend!' });
+}
+```
+
+This route will be available at:
+http://localhost:3000/api/hello
+
+```bash
+#Example: CRUD API with Next.js
+
+let users = [{ id: 1, name: 'John Doe' }];
+
+export default function handler(req, res) {
+  if (req.method === 'GET') {
+    return res.status(200).json(users);
+  }
+  
+  if (req.method === 'POST') {
+    const newUser = { id: Date.now(), name: req.body.name };
+    users.push(newUser);
+    return res.status(201).json(newUser);
+  }
+
+  res.status(405).json({ message: 'Method not allowed' });
+}
+```
+## Connecting a Database (PostgreSQL Example)
+
+You can use Prisma to connect your backend to a database.
+
+```bash
+npm install @prisma/client
+npm install prisma --save-dev
+npx prisma init
+```
+```bash
+#Update your prisma/schema.prisma:
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id    Int     @id @default(autoincrement())
+  name  String
+  email String  @unique
+}
+```
+```bash
+#Querying data in your API route:
+
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient();
+
+export default async function handler(req, res) {
+  if (req.method === 'GET') {
+    const users = await prisma.user.findMany();
+    return res.status(200).json(users);
+  }
+
+  if (req.method === 'POST') {
+    const { name, email } = req.body;
+    const newUser = await prisma.user.create({ data: { name, email } });
+    return res.status(201).json(newUser);
+  }
+
+  res.status(405).json({ message: 'Method not allowed' });
+}
+```
+
+## Middleware for Authentication
+
+Next.js provides middleware for request handling before rendering pages or API routes.
+
+```bash
+import { NextResponse } from 'next/server';
+
+export function middleware(req) {
+  const token = req.cookies.get('token');
+  if (!token) {
+    return NextResponse.redirect(new URL('/login', req.url));
+  }
+  return NextResponse.next();
+}
+```
+
+## Deployment
+
+Next.js apps can be deployed easily:
+
+Vercel (native support)
+
+AWS Lambda / Edge
+
+Docker
+
+Node.js servers
+
+```bash
+#Run a production build:
+
+npm run build
+npm start
+```
+
+## Key Takeaways
+
+- Next.js is a full-stack framework that eliminates the need for a separate backend server.
+
+- With API Routes, Middleware, and Edge Functions, you can build scalable backends.
+
+- It integrates easily with databases, authentication systems, and external APIs.
+
+- Great for startups and enterprise-grade apps alike.
